@@ -1,0 +1,10 @@
+# Build output files
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+
+# Build folder (if any)
+build/
