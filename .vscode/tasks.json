@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "C:/ProgramData/chocolatey/bin/make.exe",
+            "args": ["-j4"],
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                },
+                "env": {
+                    "PATH": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin;${env:PATH}"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "C:/ProgramData/chocolatey/bin/make.exe",
+            "args": ["clean"],
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                },
+                "env": {
+                    "PATH": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin;${env:PATH}"
+                }
+            }
+        }
+    ]
+}

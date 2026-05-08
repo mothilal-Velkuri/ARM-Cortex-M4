@@ -12,7 +12,7 @@ SECTIONS
         KEEP(*(.isr_vector))
         *(.text*)
         *(.rodata*)
-        _sidata = .;        /* ADD THIS — load address of .data in FLASH */
+        _sidata = .;
     } > FLASH
 
     .data :

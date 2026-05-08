@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32F407",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "device": "STM32F407VG",
+            "cpu": "cortex-m4",
+            "svdFile": "${workspaceFolder}/STM32F407.svd",
+            "executable": "${workspaceFolder}/blink.elf",
+            "armToolchainPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin",
+            "gdbPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gdb.exe",
+            "serverpath": "C:/openocd/bin/openocd.exe",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "env": {
+                "PATH": "C:/Users/mothi/miniconda3;C:/Users/mothi/miniconda3/Scripts;C:/Users/mothi/miniconda3/Library/bin;C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin;C:/openocd/bin;C:/ProgramData/chocolatey/bin;${env:PATH}"
+            },
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "preLaunchTask": "Build",
+            "postDebugTask": "Kill OpenOCD",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}

@@ -5,6 +5,11 @@
 *.map
 *.o
 *.d
+*.png
+*.mp4
+*.svg
+*.svd
+*.html
 
 # Build folder (if any)
 build/

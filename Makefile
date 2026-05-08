@@ -15,7 +15,7 @@ LINKER  = linker/stm32f407.ld
 
 # Build
 all:
-	$(CC) $(CPU) -nostdlib -T$(LINKER) $(STARTUP) $(SRCS) -o $(TARGET).elf
+	$(CC) $(CPU) -g -nostdlib -T$(LINKER) $(STARTUP) $(SRCS) -o $(TARGET).elf
 	$(OBJCOPY) -O binary $(TARGET).elf $(TARGET).bin
 	$(OBJCOPY) -O ihex   $(TARGET).elf $(TARGET).hex
 

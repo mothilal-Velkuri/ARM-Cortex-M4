@@ -33,12 +33,12 @@ int main(void)
     {
         /* PD12 ON, PD13 OFF */
         GPIOD_ODR |=  GREEN_LED;
-        GPIOD_ODR &= ~ORANGE_LED;
+        // GPIOD_ODR &= ~ORANGE_LED;
         delay(500000);
 
         /* PD12 OFF, PD13 ON */
         GPIOD_ODR &= ~GREEN_LED;
-        GPIOD_ODR |=  ORANGE_LED;
+        // GPIOD_ODR |=  ORANGE_LED;
         delay(500000);
     }
 
