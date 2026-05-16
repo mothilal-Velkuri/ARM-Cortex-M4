@@ -9,7 +9,7 @@ CPU     = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 
 # Files
 TARGET  = blink
-SRCS    = src/main.c
+SRCS    = src/main.c Driver/Clock/Clock.c Driver/Mco/Mco.c
 STARTUP = startup/startup_stm32f407.s
 LINKER  = linker/stm32f407.ld
 
