@@ -36,6 +36,8 @@ _vectors:
 .type Reset_Handler, %function
 Reset_Handler:
 
+    /* 1. Configure clocks FIRST — before anything else              */
+    bl    SystemClock_Config
     /* COPY .data: FLASH SRAM */
     ldr r0, =_sdata                 // r0 = SRAM destination start  
     ldr r1, =_edata                 // r1 = SRAM destination end    */
