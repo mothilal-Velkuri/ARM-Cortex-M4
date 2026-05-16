@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F407",
+            "compilerPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mfpu=fpv4-sp-d16",
+                "-mfloat-abi=hard"
+            ],
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/Driver/Clock",
+                "${workspaceFolder}/Driver/Mco",
+                "${workspaceFolder}/startup"
+            ],
+            "defines": [
+                "STM32F407xx"
+            ],
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
